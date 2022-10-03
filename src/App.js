@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import NavBar from './Components/NavBar';
 import store from './Redux/configureStore';
-import Detail from './Components/Detail';
+import Home from './Components/Home';
 import './App.css';
 
 const App = () => (
@@ -10,7 +10,7 @@ const App = () => (
     <BrowserRouter>
       <NavBar />
       <Routes>
-        <Route path="/" element={<Detail />} />
+        <Route path="/" element={<Home />} />
       </Routes>
     </BrowserRouter>
   </Provider>
