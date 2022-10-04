@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
-import { AiOutlineRightCircle } from 'react-icons/ai';
+import { useSelector } from 'react-redux';
+import numberSeparator from 'number-separator';
 import LayoutPage from './Layout/LayoutPage';
+import CountryLists from './countryLists';
+import LayoutContainer from './Layout/LayoutContainer';
 
 const Home = () => {
   const [index, setState] = useState('');
+  const { countries } = useSelector((state) => state);
   return (
-    <section>
+    <LayoutContainer>
       <LayoutPage />
       <div className="container">
         <div className="search">
@@ -19,12 +23,19 @@ const Home = () => {
           />
         </div>
         <div className="countries display">
-          <h2 className="ea-country">country</h2>
-          <AiOutlineRightCircle />
-          totallConfirmed
+          {
+            countries.filter((country) => country.Country.match(index)).map((country) => (
+              <CountryLists
+                key={country.ID}
+                id={country.ID}
+                country={country}
+                totallConfirmed={numberSeparator(country.TotalConfirmed, ',')}
+              />
+            ))
+          }
         </div>
       </div>
-    </section>
+    </LayoutContainer>
   );
 };
 
