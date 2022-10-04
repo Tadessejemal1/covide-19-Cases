@@ -1,7 +1,7 @@
 import numberSeparator from 'number-separator';
 import { useSelector } from 'react-redux';
 
-const LayoutPage = () => {
+const LandingImage = () => {
   const { global } = useSelector((state) => state);
   return (
     <div className="hero-wrapper">
@@ -23,4 +23,4 @@ const LayoutPage = () => {
     </div>
   );
 };
-export default LayoutPage;
+export default LandingImage;
