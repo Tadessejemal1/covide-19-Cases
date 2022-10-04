@@ -1,11 +1,11 @@
-import httpCommon from './httpCommon';
+import baseURL from './baseURL';
 
-const FETCH_COVID_DATA_START = 'covid-19/coviddata/FETCH_COVID_DATA_START';
-const ADD_COVID_DATA = 'covid-19/coviddata/ADD_COVID_DATA';
-const COVID_DATA_ERROR = 'covid-19/coviddata/COVID_DATA_ERROR';
+const FETCH_COVID_DATA = 'coviddata/FETCH_COVID_DATA';
+const ADD_COVID_DATA = 'coviddata/ADD_COVID_DATA';
+const COVID_DATA_ERROR = 'coviddata/COVID_DATA_ERROR';
 
-export const fetchCovidDataStart = () => ({
-  type: FETCH_COVID_DATA_START,
+export const fetchCovidData = () => ({
+  type: FETCH_COVID_DATA,
 });
 
 export const addCovidData = (payload) => ({
@@ -19,8 +19,8 @@ export const covidDataError = (payload) => ({
 });
 
 export const addCovidDataAsync = () => (dispatch) => {
-  dispatch(fetchCovidDataStart());
-  httpCommon.get('/summary').then(({ data }) => {
+  dispatch(fetchCovidData());
+  baseURL.get('/summary').then(({ data }) => {
     const { Countries: countries, Global: global } = data;
     dispatch(addCovidData({ countries, global }));
   }).catch((err) => {
@@ -37,7 +37,7 @@ const INITIAL_STATE = {
 
 const covidDataReducer = (state = INITIAL_STATE, { type, payload }) => {
   switch (type) {
-    case FETCH_COVID_DATA_START:
+    case FETCH_COVID_DATA:
       return { ...state, loading: true };
     case ADD_COVID_DATA:
       return {

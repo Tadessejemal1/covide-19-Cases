@@ -8,7 +8,7 @@ function LayoutContainer({ children, navtitle }) {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(addCovidDataAsync());
-  }, []);
+  }, [dispatch]);
   const { loading, error } = useSelector((state) => state);
   if (loading) {
     return (
