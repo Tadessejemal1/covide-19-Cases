@@ -20,13 +20,6 @@ const Details = () => {
                 <div className="flag">
                   <img className="img-world" src={country.flag} alt="world-covid" />
                 </div>
-                <div className="total-country">
-                  <p className="info">{country.Country}</p>
-                  <p className="info">
-                    Total Cases:
-                    {numberSeparator(country.TotalConfirmed, ',')}
-                  </p>
-                </div>
               </section>
             </div>
             <div className="country-info">
@@ -34,34 +27,34 @@ const Details = () => {
             </div>
             <ul>
               <li>
-                <span className="left">upto Date:</span>
-                <div className="right">{new Date(country.Date).toUTCString().slice(0, 16)}</div>
+                <span className="name">Date:</span>
+                <div className="info">{new Date(country.Date).toUTCString().slice(0, 16)}</div>
               </li>
               <li>
-                <span className="left">Total Confirmed:</span>
-                <div className="right">{numberSeparator(country.TotalConfirmed, ',')}</div>
+                <span className="name">Total Confirmed:</span>
+                <div className="info">{numberSeparator(country.TotalConfirmed, ',')}</div>
               </li>
               <li>
-                <span className="left">New Confirmed:</span>
-                <div className="right">{numberSeparator(country.NewConfirmed, ',')}</div>
+                <span className="name">New Confirmed:</span>
+                <div className="info">{numberSeparator(country.NewConfirmed, ',')}</div>
               </li>
               <li>
-                <span className="left">New Recovered:</span>
-                <div className="right">{numberSeparator(country.NewRecovered, ',')}</div>
+                <span className="name">New Recovered:</span>
+                <div className="info">{numberSeparator(country.NewRecovered, ',')}</div>
               </li>
               <li>
-                <span className="left">Total Deaths:</span>
-                <div className="right">{numberSeparator(country.TotalDeaths, ',')}</div>
+                <span className="name">Total Deaths:</span>
+                <div className="info">{numberSeparator(country.TotalDeaths, ',')}</div>
               </li>
               <li>
-                <span className="left">New Deaths:</span>
-                <div className="right">{numberSeparator(country.NewDeaths, ',')}</div>
+                <span className="name">New Deaths:</span>
+                <div className="info">{numberSeparator(country.NewDeaths, ',')}</div>
               </li>
             </ul>
 
           </div>
         )
-        : <h4 className="text-center white">sorry, No Country data found  </h4>
+        : <h4 className="unless">sorry, No Country data found  </h4>
     }
     </LayoutContainer>
   );
