@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/covide-19-Cases/static/css/main.e4537554.css",
+    "main.js": "/covide-19-Cases/static/js/main.799cdf1e.js",
+    "static/media/coronal.jpg": "/covide-19-Cases/static/media/coronal.47d9e61f8c3b8fd5b5ef.jpg",
+    "index.html": "/covide-19-Cases/index.html",
+    "main.e4537554.css.map": "/covide-19-Cases/static/css/main.e4537554.css.map",
+    "main.799cdf1e.js.map": "/covide-19-Cases/static/js/main.799cdf1e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e4537554.css",
+    "static/js/main.799cdf1e.js"
+  ]
+}
