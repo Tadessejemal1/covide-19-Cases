@@ -19,7 +19,7 @@ This web app helps you get latest covid-19 global and by country statistical dat
 [watch me](https://loom.com/share/6d1cfb01ab954243ac4c2475185bdf50)
 ## Live Demo
 
-[click me]()
+[click me](https://6256dc07a9940a275a24dff6--gleeful-chimera-2ff1ba.netlify.app/)
 ## 
 ## Getting Started
 
