@@ -8,6 +8,7 @@ import LayoutContainer from './Layout/LayoutContainer';
 const Home = () => {
   const [index, setState] = useState('');
   const { countries } = useSelector((state) => state);
+  if (countries === undefined) { return <h1>...Loading</h1>; }
   return (
     <LayoutContainer>
       <LayoutPage />
@@ -23,16 +24,15 @@ const Home = () => {
           />
         </div>
         <div className="countries display">
-          {
-            countries.filter((country) => country.Country.match(index)).map((country) => (
+          {countries
+            && countries.filter((country) => country.Country.match(index)).map((country) => (
               <CountryLists
                 key={country.ID}
                 id={country.ID}
                 country={country}
                 totallConfirmed={numberSeparator(country.TotalConfirmed, ',')}
               />
-            ))
-          }
+            ))}
         </div>
       </div>
     </LayoutContainer>
