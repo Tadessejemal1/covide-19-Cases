@@ -224,9 +224,11 @@ li:nth-child(odd) {
   .data_world {
     padding: 6rem 0.4rem;
   }
+
   a.countries {
     width: 45%;
   }
+
   .img {
     width: 85%;
     height: 85%;

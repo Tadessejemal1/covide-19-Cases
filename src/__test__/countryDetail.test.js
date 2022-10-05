@@ -5,7 +5,6 @@ import { Provider } from 'react-redux';
 import Details from '../Components/countryDetail';
 import store from '../Redux/configureStore';
 
-
 describe('Detail', () => {
   it('countryDeatil component renders correctly', () => {
     const tree = render(
