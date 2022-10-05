@@ -1,4 +1,5 @@
 # React-Capstone-Project
+This web app helps you get latest covid-19 global and by country statistical data by fetching live data from a public API provided by Open Disease Data API that collects information from different data sources to provide comprehensive data for the novel coronavirus, SARS-CoV-2 (Covid-19).
 # Project Name
 
 > covide-19-Cases
