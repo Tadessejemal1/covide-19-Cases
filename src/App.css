@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gill Sans', sans-serif;
+}
+
 .navbar {
   display: flex;
   background-color: #4369b2;
@@ -42,33 +49,26 @@
   margin: 0 20px;
 }
 
-.content {
+.data {
   padding: 20px;
 }
 
-.hero-wrapper {
+.Total_world_data {
   height: 40vh;
   background: url(./assets/coronal.jpg);
   background-size: cover;
 }
 
-.hero {
+.data_world {
   height: 100%;
   position: relative;
   background:
     linear-gradient(
       to right,
-      rgba(255, 203, 203, 0),
+      rgba(58, 34, 34, 0),
       #5687e4
     );
   padding: 4rem 33.4rem;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Gill Sans', sans-serif;
 }
 
 html,
@@ -118,7 +118,7 @@ div.countries {
 }
 
 a.countries {
-  width: 45%;
+  width: 25%;
   border: 1px solid #4369b2;
   border-radius: 1px;
   padding: 3rem 2rem 3rem 2rem;
@@ -128,11 +128,11 @@ a.countries {
   text-decoration: none;
 }
 
-a.countries:nth-child(4n+1) {
+a.countries:nth-child(6n+1) {
   background-color: #4369b2;
 }
 
-a.countries:nth-child(4n+4) {
+a.countries:nth-child(6n+4) {
   background-color: #4369b2;
 }
 
@@ -220,8 +220,17 @@ li:nth-child(odd) {
   flex: 1;
 }
 
-@media screen and (max-width: 969px) {
-  .hero {
+@media screen and (max-width: 769px) {
+  .data_world {
     padding: 6rem 0.4rem;
+  }
+
+  a.countries {
+    width: 45%;
+  }
+
+  .img {
+    width: 85%;
+    height: 85%;
   }
 }

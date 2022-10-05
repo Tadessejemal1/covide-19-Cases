@@ -21,7 +21,7 @@ const Navbar = ({ title }) => (
         )
         : (
           <h4 className="header-text">
-            Countries &apos; s COVID-19 Data
+            Countries &apos; s Status
           </h4>
         )
 }
