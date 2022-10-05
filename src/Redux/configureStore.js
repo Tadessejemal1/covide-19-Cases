@@ -2,10 +2,10 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 
-import reducer from './..Redux';
+import covidDataReducer from './reducer';
 
 const store = createStore(
-  reducer,
+  covidDataReducer,
   applyMiddleware(logger, thunk),
 );
 
