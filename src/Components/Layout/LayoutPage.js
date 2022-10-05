@@ -4,9 +4,9 @@ import { useSelector } from 'react-redux';
 const LandingImage = () => {
   const { global } = useSelector((state) => state);
   return (
-    <div className="hero-wrapper">
-      <div className="hero">
-        <div className="content">
+    <div className="Total_world_data">
+      <div className="data_world">
+        <div className="data">
           <h1 className="text">
             Global data
           </h1>

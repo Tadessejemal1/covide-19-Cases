@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { addCovidDataAsync } from '../../Redux/reducer';
 import Navbar from '../NavBar';
 
-function LayoutContainer({ children, navtitle }) {
+const LayoutContainer = ({ children, navtitle }) => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(addCovidDataAsync());
@@ -32,7 +32,7 @@ function LayoutContainer({ children, navtitle }) {
       {children}
     </>
   );
-}
+};
 
 LayoutContainer.defaultProps = {
   navtitle: '',

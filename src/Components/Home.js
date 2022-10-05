@@ -13,12 +13,12 @@ const Home = () => {
       <LayoutPage />
       <div className="container">
         <div className="search">
-          <h4 className="country-search">Search By Country: </h4>
+          <h4 className="country-search">Search: </h4>
           <input
             value={index}
             type="text"
             onChange={(e) => setState(e.target.value)}
-            placeholder="Type to search by country"
+            placeholder="Search Country"
             className="search-input"
           />
         </div>

@@ -18,7 +18,7 @@ const Details = () => {
             <div>
               <section className="info-covid display">
                 <div className="flag">
-                  <img className="img-world" src={country.flag} alt="world-covid" />
+                  <img className="img" src={country.flag} alt="covid-flag" />
                 </div>
               </section>
             </div>
