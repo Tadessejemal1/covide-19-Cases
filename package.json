@@ -1,8 +1,8 @@
 {
-  "name": "covidcases",
+  "name": "World covid cases",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Tadessejemal1.github.io/covide-19-Cases",
+  "homepage": "./",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.5",
     "@testing-library/jest-dom": "^5.16.5",
